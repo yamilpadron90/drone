@@ -1,0 +1,12 @@
+kind: pipeline
+name: linux-amd64
+
+steps:
+- name: build
+  image: mhart/alpine-node
+  commands:
+  - echo "Hello world" > index.js; node index.js
+  when:
+    event:
+    - push
+    - tag
