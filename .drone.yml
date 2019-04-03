@@ -5,7 +5,7 @@ steps:
 - name: build
   image: mhart/alpine-node
   commands:
-  - echo "Hello world" > index.js; node index.js
+  - node -v
   when:
     event:
     - push
